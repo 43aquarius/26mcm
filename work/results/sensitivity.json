@@ -1,0 +1,106 @@
+{
+  "p1_conv": {
+    "maxdiff_T_N20_N40": 0.0015,
+    "maxdiff_C_N20_N40": 0.0329,
+    "maxdiff_N40_N80": 0.0061,
+    "mass_err_N20": 4.03e-05,
+    "runtime_s": 39.7
+  },
+  "p3_conv": {
+    "t_end_base_h": 16.4647,
+    "t_end_dt2_h": 16.465,
+    "t_end_N40dt05_h": 16.4661,
+    "dt2_rel_dev_pct": 0.0017,
+    "N40_rel_dev_pct": 0.0084,
+    "mass_err": 4.03e-05,
+    "runtime_s": 51.4
+  },
+  "p3_sweep": {
+    "h": {
+      "base_h": 16.4647,
+      "m20_h": 16.4869,
+      "p20_h": 16.4503,
+      "rel_change_pct": 0.135
+    },
+    "h_m": {
+      "base_h": 16.4647,
+      "m20_h": 19.2239,
+      "p20_h": 14.6342,
+      "rel_change_pct": 16.7581
+    },
+    "k": {
+      "base_h": 16.4647,
+      "m20_h": 16.4683,
+      "p20_h": 16.4625,
+      "rel_change_pct": 0.0219
+    },
+    "rho_cp": {
+      "base_h": 16.4647,
+      "m20_h": 16.4447,
+      "p20_h": 16.4853,
+      "rel_change_pct": 0.1248
+    },
+    "D0": {
+      "base_h": 16.4647,
+      "m20_h": 17.7753,
+      "p20_h": 15.5928,
+      "rel_change_pct": 7.9598
+    }
+  },
+  "p3_variants": {
+    "t_end_lastpoint_h": 16.4378,
+    "t_end_endface_corr_h": 15.6433,
+    "t_end_latent_h": 16.4686,
+    "rel_lastpoint_pct": -0.1636,
+    "rel_endface_pct": -4.9888,
+    "rel_latent_pct": 0.0236
+  },
+  "p4": {
+    "N40_rel_dev_pct": 0.0085,
+    "t_end_base_h": 19.6567,
+    "t_end_noshrink_h": 39.2128,
+    "shrink_speedup_pct": 49.8718,
+    "mass_err": 0.449,
+    "h": {
+      "base_h": 19.6567,
+      "m20_h": 19.675,
+      "p20_h": 19.645,
+      "rel_change_pct": 0.0933
+    },
+    "h_m": {
+      "base_h": 19.6567,
+      "m20_h": 21.1778,
+      "p20_h": 18.6611,
+      "rel_change_pct": 7.7384
+    },
+    "D0": {
+      "base_h": 19.6567,
+      "m20_h": 22.3011,
+      "p20_h": 17.8783,
+      "rel_change_pct": 13.4532
+    },
+    "k": {
+      "base_h": 19.6567,
+      "m20_h": 19.6606,
+      "p20_h": 19.6544,
+      "rel_change_pct": 0.0198
+    },
+    "rho_cp": {
+      "base_h": 19.6567,
+      "m20_h": 19.64,
+      "p20_h": 19.6744,
+      "rel_change_pct": 0.0904
+    },
+    "runtime_s": 144.1
+  },
+  "p1_vs_p2_at1800": {
+    "T_center_att2": 33.5752,
+    "T_center_att3": 32.1802,
+    "T_surf_att2": 36.7853,
+    "T_surf_att3": 35.4097,
+    "C_center_att2": 2.55,
+    "C_center_att3": 2.55,
+    "C_surf_att2": 1.5116,
+    "C_surf_att3": 1.4726
+  }
+}

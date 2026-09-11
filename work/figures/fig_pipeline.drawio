@@ -1,0 +1,46 @@
+<mxfile host="app.diagrams.net" type="device">
+  <diagram name="fig_pipeline" id="pipeline">
+    <mxGraphModel dx="1200" dy="700" grid="0" pageWidth="1000" pageHeight="420">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p1" value="读取附件1/2&#10;xlsx → 数组" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="30" y="60" width="140" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="p2" value="质量检查&#10;步长60/1800 s 断言&#10;单调性断言" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="210" y="60" width="140" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" value="边界调度构造&#10;线性插值器 (T_a,C_a)&#10;恒温段=末30min均值" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="390" y="60" width="150" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="p4" value="物性装配&#10;附录2/3/4 参数集&#10;D 下限截断 1e-14" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="580" y="60" width="150" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="p5" value="FVM 离散&#10;调和平均界面系数&#10;Robin 表面通量" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="770" y="60" width="150" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="q1" value="时间推进&#10;Picard–CN（n_iter=2）" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="770" y="200" width="150" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="q2" value="事件监测&#10;max C &lt; 0.15 → t_end&#10;线性细化至 1 s" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="560" y="200" width="160" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="q3" value="输出&#10;表1–表6 · result1–4.xlsx&#10;数据图 PDF" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="350" y="200" width="160" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="q4" value="校验回路&#10;守恒闭合 &lt;1e-4&#10;网格加密对比" style="rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="140" y="200" width="160" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="f1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="p1" target="p2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="f2" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="p2" target="p3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="f3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="p3" target="p4"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="f4" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="p4" target="p5"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="f5" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="p5" target="q1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="f6" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="q1" target="q2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="f7" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="q2" target="q3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="f8" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="q3" target="q4"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="f9" value="不通过则修正" style="edgeStyle=orthogonalEdgeStyle;dashed=1;fontSize=9;" edge="1" parent="1" source="q4" target="p2"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="80" y="232" /><mxPoint x="80" y="150" /><mxPoint x="280" y="150" /></Array></mxGeometry></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
