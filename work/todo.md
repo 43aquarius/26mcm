@@ -1,0 +1,25 @@
+# 待办事项
+
+- [x] 0. 工作流启动（`1start-mathmodel`）：plan.md / todo.md / 目录骨架
+- [x] 1. 赛题分析与建模设计（`2analysis-modeling`）
+  - [x] 附件数据理解（附件1/2/3）
+  - [x] 假设敏感性预检（歧义清单 + 验算）
+  - [x] `reports/ANALYSIS_MODELING_REPORT.md`
+- [x] 2. 编程实现和图表生成（`3coding-visual`）
+  - [x] `code/utils.py` 求解器 + `problem1–4.py` + `sensitivity.py`
+  - [x] `results/result1–4.xlsx` 与结果 JSON
+  - [x] 数据型图表 PDF 到 `figures/`
+  - [x] `reports/RESULTS_REPORT.md`
+- [x] 3. 流程与架构图绘制（`4drawio`）
+  - [x] fig_roadmap / fig_pipeline / fig_domain_mapping（.drawio + PDF，`code/drawio_render.py` 回退渲染）
+  - [x] `reports/DRAWIO_REPORT.md`
+- [x] 4. 竞赛论文撰写（`5writing`，zh/cumcm Typst 模板）
+  - [x] 模板复制、main.typ 适配（四问题章节、去目录、字体栈、标题）
+  - [x] 各节撰写 + 19 图全部嵌入 + 表1–表6 + 参考文献 + 附录 A 代码
+  - [x] 摘要与关键词
+  - [x] 编译 `paper/main.pdf`（45 页，无错误）
+- [x] 5. 验证和验收（`6verity`）
+  - [x] `writing_check.sh` 文本门禁 PASS
+  - [x] 数值一致性、图表引用、格式规范核对
+  - [x] PDF 逐页视觉检查（渲染抽查无缺字/无溢出）
+  - [x] `reports/VERIFY_REPORT.md`
